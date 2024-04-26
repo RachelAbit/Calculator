@@ -10,41 +10,41 @@
 <body>
 
     <div id="calc-container">
-        <div class="display"></div>
+        <div class="output"></div>
         <div class="buttons">
             <div class="div-1">
                 <div class="btn1">
-                    <button>AC</button>
-                    <button>%</button>
-                    <button>+/-</button>
+                    <button onclick="clearAll()">AC</button>
+                    <button onclick="">&#x2190;</button>
+                    <button onclick="">+/-</button>
                 </div>
                 <div class="btn2">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
+                    <button onclick="displayVal(7)">7</button>
+                    <button onclick="displayVal(8)">8</button>
+                    <button onclick="displayVal(9)">9</button>
                 </div>
                 <div class="btn3">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    <button onclick="displayVal(4)">4</button>
+                    <button onclick="displayVal(5)">5</button>
+                    <button onclick="displayVal(6)">6</button>
                 </div>
                 <div class="btn4">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button onclick="displayVal(1)">1</button>
+                    <button onclick="displayVal(2)">2</button>
+                    <button onclick="displayVal(3)">3</button>
                 </div>
                 <div class="btn5">
-                    <button>0</button>
-                    <button>.</button>
-                    <button class="equal">=</button>
+                    <button onclick="displayVal(0)">0</button>
+                    <button onclick="operatorVal('.')">.</button>
+                    <button class="equal" onclick="operate()">=</button>
                 </div>
             </div>
             <div class="div-2">
                 <div class="btn6">
-                    <button>/</button>
-                    <button>-</button>
-                    <button>x</button>
-                    <button class="add">+</button>
+                    <button onclick="operatorVal('/')">/</button>
+                    <button onclick="operatorVal('-')">-</button>
+                    <button onclick="operatorVal('*')">x</button>
+                    <button class="add" onclick="operatorVal('+')">+</button>
                 </div>
             </div>
         </div>
