@@ -7,7 +7,7 @@ let display_ope = '';
 
 function displayVal(val){
 
-    if(display_ope == ''){
+    if(display_ope === ''){
         display_fnum  += val; 
     } else{
         display_snum  += val;
@@ -24,8 +24,8 @@ function operatorVal(val){
 function clearAll(){
     output.textContent = display;
     display_fnum = '';
-    display_snum = '';
     display_ope = '';
+    display_snum = '';
 }
 
 function operate(){
@@ -35,10 +35,16 @@ function operate(){
 
    if(split.includes('+')){
       let add = fnum + snum;
-      console.log(add);
+      output.textContent = add;
    } else if(split.includes('-')){
       let minus = fnum - snum;
-      console.log(minus);
-   }
+      output.textContent  = minus;
+   } else if(split.includes('*')){
+      let multiply = fnum * snum;
+      output.textContent = multiply;
+   } else if(split.includes('/')){
+      let divide = fnum / snum;
+      output.textContent = divide;
+   } 
    
 }
