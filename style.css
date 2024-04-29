@@ -6,6 +6,7 @@
 }
 #calc-container{
     border: 5px solid gray;
+    border-radius: 10px;
     width: 400px;
     height: 500px;
     margin: auto;
