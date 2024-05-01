@@ -1,48 +1,59 @@
 const output = document.querySelector('.output');
+const number = document.querySelectorAll('.number');
+const operator = document.querySelectorAll('.operator');
 
-let display = '';
-let display_fnum = ''; //first number
-let display_snum = '';//second number
-let display_ope = '';
+let fnum = '';
+let snum = '';
+let ope = '';
 
-function displayVal(val){
-    if(display_ope === ''){
-       display_fnum += val;
-    } else{
-        display_snum  += val; //the second number that you will press is will be put in display_snum
-    }
-    output.textContent += val;
+function display(value){
+   if( ope === ''){
+      fnum += value;
+   } else{
+      snum += value;
+   }
+   output.innerText += value;
+   console.log(value)
 }
 
-function operatorVal(val){
-    display_ope = output.textContent += val;
+function operators(value){
+   ope += output.innerText += value;
 }
 
 function clearAll(){
-    output.textContent = display;
-    display_fnum = '';
-    display_ope = '';
-    display_snum = '';
+   output.innerText = '';
+   ope = '';
+   fnum = '';
+   snum = '';
 }
 
+function del(){
+   let val = output.innerText;
+   let del = val.substring(0, val.length - 1)
+   output.innerText = del;
+   fnum = '';
+   snum = '';
+   ope = '';
+   console.log(del);
+}
 
-function operate(){
-   let split = display_ope.split('');
-   let fnum = parseFloat(display_fnum);
-   let snum = parseFloat(display_snum);
+function equal(){
+   let check_op = ope.split('');
+   let firstnum = parseFloat(fnum);
+   let secondnum = parseFloat(snum);
 
-   if(split.includes('+')){
-      let add = fnum + snum;
-      output.textContent = add;
-   } else if(split.includes('-')){
-      let minus = fnum - snum;
-      output.textContent  = minus;
-   } else if(split.includes('*')){
-      let multiply = fnum * snum;
-      output.textContent = multiply;
-   } else if(split.includes('/')){
+   if(check_op.includes('+')){
+      const add = firstnum + secondnum;
+      output.innerText = add;
+   } else if(check_op.includes('-')){
+      const minus = firstnum - secondnum;
+      output.innerText = minus;
+   } else if(check_op.includes('x')){
+      const multiply = firstnum * secondnum;
+      output.innerText = multiply;
+   } else if(check_op.includes('/')){
       let divide;
-      if(snum === 0){
+      if(secondnum === 0){
         output.textContent = 'ERROR';
       } else {
         divide = fnum / snum;

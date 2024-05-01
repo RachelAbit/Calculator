@@ -15,36 +15,36 @@
             <div class="div-1">
                 <div class="btn1">
                     <button onclick="clearAll()">AC</button>
-                    <button onclick="">&#x2190;</button>
-                    <button onclick="operatorVal('!')">x!</button>
+                    <button onclick="del()">&#x2190;</button>
+                    <button>x!</button>
                 </div>
                 <div class="btn2">
-                    <button onclick="displayVal(7)">7</button>
-                    <button onclick="displayVal(8)">8</button>
-                    <button onclick="displayVal(9)">9</button>
+                    <button class="number" onclick="display('7')">7</button>
+                    <button class="number" onclick="display('8')">8</button>
+                    <button class="number" onclick="display('9')">9</button>
                 </div>
                 <div class="btn3">
-                    <button onclick="displayVal(4)">4</button>
-                    <button onclick="displayVal(5)">5</button>
-                    <button onclick="displayVal(6)">6</button>
+                    <button class="number" onclick="display('4')">4</button>
+                    <button class="number" onclick="display('5')">5</button>
+                    <button class="number" onclick="display('6')">6</button>
                 </div>
                 <div class="btn4">
-                    <button onclick="displayVal(1)">1</button>
-                    <button onclick="displayVal(2)">2</button>
-                    <button onclick="displayVal(3)">3</button>
+                    <button class="number" onclick="display('1')">1</button>
+                    <button class="number" onclick="display('2')">2</button>
+                    <button class="number" onclick="display('3')">3</button>
                 </div>
                 <div class="btn5">
-                    <button onclick="displayVal(0)">0</button>
-                    <button onclick="operatorVal('.')">.</button>
-                    <button class="equal" onclick="operate()">=</button>
+                    <button class="number" onclick="display('0')">0</button>
+                    <button class="decimal">.</button>
+                    <button onclick="equal()">=</button>
                 </div>
             </div>
             <div class="div-2">
                 <div class="btn6">
-                    <button onclick="operatorVal('/')">/</button>
-                    <button onclick="operatorVal('-')">-</button>
-                    <button onclick="operatorVal('*')">x</button>
-                    <button class="add" onclick="operatorVal('+')">+</button>
+                    <button class="operator" onclick="operators('/')">/</button>
+                    <button class="operator" onclick="operators('-')">-</button>
+                    <button class="operator" onclick="operators('x')">x</button>
+                    <button class="add operator" onclick="operators('+')">+</button>
                 </div>
             </div>
         </div>
